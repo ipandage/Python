@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 result = []
 def get_all(cwd):
@@ -13,4 +14,5 @@ def get_all(cwd):
             
 if __name__ == "__main__": 
     cur_path = os.getcwd()   #当前目录
+    cur_path = '/tmp/gxg'
     get_all(cur_path)

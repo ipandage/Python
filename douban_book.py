@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 import requests
 from openpyxl import Workbook
-excel_name = "书籍.xlsx"
+excel_name = u"书籍.xlsx"
 wb = Workbook()
 ws1 = wb.active
-ws1.title='书籍'
+ws1.title=u'书籍'
 
 
 def get_html(url):

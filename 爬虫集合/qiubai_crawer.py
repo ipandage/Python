@@ -1,6 +1,11 @@
+# -*- coding: utf-8 -*-
 import requests
 from bs4 import BeautifulSoup
+import sys
+import io
 
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 def download_page(url):
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"}
@@ -38,8 +43,9 @@ def get_content(html, page):
 
 def save_txt(*args):
     for i in args:
-        with open('qiubai.txt', 'a', encoding='utf-8') as f:
-            f.write(i)
+        with io.open('qiubai.txt', 'a', encoding='utf-8') as f:
+            str = i.decode(i)
+            f.write(str)
 
 
 def main():

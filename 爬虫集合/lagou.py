@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import random
 import time
 
@@ -5,13 +6,18 @@ import requests
 from openpyxl import Workbook
 import pymysql.cursors
 
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 def get_conn():
     '''建立数据库连接'''
-    conn = pymysql.connect(host='localhost',
+    conn = pymysql.connect(host='192.168.22.2',
                                 user='root',
                                 password='root',
-                                db='python',
+                                db='test',
                                 charset='utf8mb4',
                                 cursorclass=pymysql.cursors.DictCursor)
     return conn
